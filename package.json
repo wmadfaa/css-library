@@ -1,0 +1,19 @@
+{
+  "name": "css-library",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "templates/*",
+    "scripts"
+  ],
+  "author": {
+    "name": "Wasim Almadfaa",
+    "email": "wm.madfaa@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@css-library/scripts": "1.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@css-library/scripts",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "author": {
+    "name": "Wasim Almadfaa",
+    "email": "wm.madfaa@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-prompt": "^1.2.0",
+    "through2": "^3.0.1"
+  }
+}

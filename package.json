@@ -13,7 +13,7 @@
     "email": "wm.madfaa@gmail.com"
   },
   "license": "ISC",
-  "devDependencies": {
-    "@css-library/scripts": "1.0.0"
+  "dependencies": {
+    "@css-library/styles.template": "1.0.0"
   }
 }

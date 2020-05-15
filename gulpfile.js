@@ -1,3 +1,3 @@
-const { generate } = require("@css-library/scripts");
+const generateStylesPackage = require("@css-library/styles.template");
 
-exports.generate = generate;
+exports.generateStylesPackage = generateStylesPackage;

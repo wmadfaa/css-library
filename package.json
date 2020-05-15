@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "scripts": {
+    "generate:stylesPackage": "gulp generateStylesPackage",
+    "generate:templatePackage": "gulp generateTemplatePackage"
+  },
   "workspaces": [
     "packages/*",
     "templates/*",
@@ -14,6 +18,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@css-library/styles.template": "1.0.0"
+    "@css-library/styles.template": "1.0.0",
+    "@css-library/template.template": "1.0.0",
+    "gulp": "^4.0.2"
   }
 }

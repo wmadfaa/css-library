@@ -9,10 +9,8 @@
     "email": "wm.madfaa@gmail.com"
   },
   "license": "ISC",
-  "devDependencies": {
-    "@css-library/scripts": "1.0.0"
-  },
   "dependencies": {
+    "@css-library/scripts": "1.0.0",
     "gulp": "^4.0.2"
   }
 }

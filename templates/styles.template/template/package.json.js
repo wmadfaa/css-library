@@ -4,6 +4,7 @@ module.exports = function (options) {
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "main": "dist/index.min.css",
   "scripts": {
     "build": "gulp build",
     "watch": "gulp watch"

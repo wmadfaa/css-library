@@ -1,5 +1,3 @@
-import "@css-library/test-styles/dist/src/styles.min.css";
-
 export default {
   title: "Demo",
 };

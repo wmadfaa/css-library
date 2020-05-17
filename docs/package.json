@@ -1,0 +1,21 @@
+{
+  "name": "@css-library/docs",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "author": {
+    "name": "Wasim Almadfaa",
+    "email": "wm.madfaa@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@storybook/html": "^5.3.18",
+    "babel-loader": "^8.1.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}

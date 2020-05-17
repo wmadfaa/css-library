@@ -10,7 +10,8 @@
   "workspaces": [
     "packages/*",
     "templates/*",
-    "scripts"
+    "scripts",
+    "docs"
   ],
   "author": {
     "name": "Wasim Almadfaa",

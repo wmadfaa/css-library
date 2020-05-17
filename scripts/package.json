@@ -12,8 +12,10 @@
   "dependencies": {
     "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
+    "del": "^5.1.0",
     "fibers": "^5.0.0",
     "gulp": "^4.0.2",
+    "gulp-exec": "^4.0.0",
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^8.0.0",
     "gulp-prompt": "^1.2.0",

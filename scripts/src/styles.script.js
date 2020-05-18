@@ -14,7 +14,7 @@ const { banner } = require("../common");
 sass.compiler = require("sass");
 
 function compileStyles(cb) {
-  src(paths.STYLES_INPUT_PATH)
+  src([paths.STYLES_INPUT_PATH, ...paths.STYLES_EXCLUDE_PATHS])
     .pipe(sourcemaps.init())
     .pipe(sass({ fiber }).on("error", sass.logError))
     .pipe(sourcemaps.write())

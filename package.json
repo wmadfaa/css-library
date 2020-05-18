@@ -21,6 +21,9 @@
   "dependencies": {
     "@css-library/styles.template": "1.0.0",
     "@css-library/template.template": "1.0.0",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "stylelint": "^13.4.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-scss": "^3.17.2"
   }
 }

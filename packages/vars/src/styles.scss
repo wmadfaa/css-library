@@ -1,0 +1,7 @@
+@use './themes' as theme;
+
+.box {
+  color: theme.variable("global-color-blue-400");
+  background-color: theme.variable("global-color-celery-400");
+  // border: theme.variable("not-exist");
+}

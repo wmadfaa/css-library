@@ -13,30 +13,30 @@ const { banner } = require("../common");
 
 sass.compiler = require("sass");
 
-function compileStyles(cb) {
-  src([paths.STYLES_INPUT_PATH, ...paths.STYLES_EXCLUDE_PATHS])
-    .pipe(sourcemaps.init())
-    .pipe(sass({ fiber }).on("error", sass.logError))
-    .pipe(sourcemaps.write())
-    .pipe(postcss([autoprefixer()]))
-    .pipe(
-      header(banner.main, {
-        package: require(paths.MODULE_PACKAGE_JSON_FILE),
-      })
-    )
-    .pipe(dest(paths.STYLES_OUTPUT_PATH))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(
-      postcss([
-        minify({
-          discardComments: {
-            removeAll: true,
-          },
-        }),
-      ])
-    )
-    .pipe(dest(paths.STYLES_OUTPUT_PATH));
-  cb();
-}
-
-module.exports = compileStyles;
+module.exports = function (exclude_paths = []) {
+  return function compileStyles(cb) {
+    src([paths.STYLES_INPUT_PATH, ...paths.STYLES_EXCLUDE_PATHS, ...exclude_paths])
+      .pipe(sourcemaps.init())
+      .pipe(sass({ fiber }).on("error", sass.logError))
+      .pipe(sourcemaps.write())
+      .pipe(postcss([autoprefixer()]))
+      .pipe(
+        header(banner.main, {
+          package: require(paths.MODULE_PACKAGE_JSON_FILE),
+        })
+      )
+      .pipe(dest(paths.STYLES_OUTPUT_PATH))
+      .pipe(rename({ suffix: ".min" }))
+      .pipe(
+        postcss([
+          minify({
+            discardComments: {
+              removeAll: true,
+            },
+          }),
+        ])
+      )
+      .pipe(dest(paths.STYLES_OUTPUT_PATH));
+    cb();
+  };
+};

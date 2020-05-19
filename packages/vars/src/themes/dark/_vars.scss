@@ -1,0 +1,122 @@
+$global-color-celery-400: rgb(68, 181, 86);
+$global-color-celery-500: rgb(75, 195, 95);
+$global-color-celery-600: rgb(81, 210, 103);
+$global-color-celery-700: rgb(88, 224, 111);
+
+$global-color-chartreuse-400: rgb(133, 208, 68);
+$global-color-chartreuse-500: rgb(142, 222, 73);
+$global-color-chartreuse-600: rgb(155, 236, 84);
+$global-color-chartreuse-700: rgb(163, 248, 88);
+
+$global-color-yellow-400: rgb(223, 191, 0);
+$global-color-yellow-500: rgb(237, 204, 0);
+$global-color-yellow-600: rgb(250, 217, 0);
+$global-color-yellow-700: rgb(255, 226, 46);
+
+$global-color-magenta-400: rgb(216, 55, 144);
+$global-color-magenta-500: rgb(226, 73, 157);
+$global-color-magenta-600: rgb(236, 90, 170);
+$global-color-magenta-700: rgb(245, 107, 183);
+
+$global-color-fuchsia-400: rgb(192, 56, 204);
+$global-color-fuchsia-500: rgb(207, 62, 220);
+$global-color-fuchsia-600: rgb(217, 81, 229);
+$global-color-fuchsia-700: rgb(227, 102, 239);
+
+$global-color-purple-400: rgb(146, 86, 217);
+$global-color-purple-500: rgb(157, 100, 225);
+$global-color-purple-600: rgb(168, 115, 233);
+$global-color-purple-700: rgb(180, 131, 240);
+
+$global-color-indigo-400: rgb(103, 103, 236);
+$global-color-indigo-500: rgb(117, 117, 241);
+$global-color-indigo-600: rgb(130, 130, 246);
+$global-color-indigo-700: rgb(144, 144, 250);
+
+$global-color-seafoam-400: rgb(27, 149, 154);
+$global-color-seafoam-500: rgb(32, 163, 168);
+$global-color-seafoam-600: rgb(35, 178, 184);
+$global-color-seafoam-700: rgb(38, 192, 199);
+
+$global-color-red-400: rgb(227, 72, 80);
+$global-color-red-500: rgb(236, 91, 98);
+$global-color-red-600: rgb(247, 109, 116);
+$global-color-red-700: rgb(255, 123, 130);
+
+$global-color-orange-400: rgb(230, 134, 25);
+$global-color-orange-500: rgb(242, 148, 35);
+$global-color-orange-600: rgb(249, 164, 63);
+$global-color-orange-700: rgb(255, 181, 91);
+
+$global-color-green-400: rgb(45, 157, 120);
+$global-color-green-500: rgb(51, 171, 132);
+$global-color-green-600: rgb(57, 185, 144);
+$global-color-green-700: rgb(63, 200, 156);
+
+$global-color-blue-400: rgb(38, 128, 235);
+$global-color-blue-500: rgb(55, 142, 240);
+$global-color-blue-600: rgb(75, 156, 245);
+$global-color-blue-700: rgb(90, 169, 250);
+
+$global-color-gray-50: rgb(37, 37, 37);
+$global-color-gray-75: rgb(47, 47, 47);
+$global-color-gray-100: rgb(50, 50, 50);
+$global-color-gray-200: rgb(62, 62, 62);
+$global-color-gray-300: rgb(74, 74, 74);
+$global-color-gray-400: rgb(90, 90, 90);
+$global-color-gray-500: rgb(110, 110, 110);
+$global-color-gray-600: rgb(144, 144, 144);
+$global-color-gray-700: rgb(185, 185, 185);
+$global-color-gray-800: rgb(227, 227, 227);
+$global-color-gray-900: rgb(255, 255, 255);
+
+$alias-background-color-modal-overlay: rgba(0, 0, 0, 0.5);
+$alias-dropshadow-color: rgba(0, 0, 0, 0.5);
+$alias-background-color-hover-overlay: rgba(255, 255, 255, 0.06);
+$alias-highlight-hover: rgba(255, 255, 255, 0.07);
+$alias-highlight-active: rgba(255, 255, 255, 0.1);
+$alias-highlight-selected: rgba(55, 142, 240, 0.15);
+$alias-highlight-selected-hover: rgba(55, 142, 240, 0.25);
+$alias-text-highlight-color: rgba(55, 142, 240, 0.25);
+$alias-background-color-quickactions: rgba(50, 50, 50, 0.9);
+$alias-radial-reaction-color-default: rgba(227, 227, 227, 0.6);
+$alias-pasteboard-background-color: $global-color-gray-50;
+$alias-appframe-border-color: $global-color-gray-50;
+$alias-appframe-separator-color: $global-color-gray-50;
+
+$colorarea-border-color: rgba(255, 255, 255, 0.1);
+$colorarea-border-color-hover: rgba(255, 255, 255, 0.1);
+$colorarea-border-color-down: rgba(255, 255, 255, 0.1);
+$colorarea-border-color-key-focus: rgba(255, 255, 255, 0.1);
+
+$colorslider-border-color: rgba(255, 255, 255, 0.1);
+$colorslider-border-color-hover: rgba(255, 255, 255, 0.1);
+$colorslider-border-color-down: rgba(255, 255, 255, 0.1);
+$colorslider-border-color-key-focus: rgba(255, 255, 255, 0.1);
+$colorslider-vertical-border-color: rgba(255, 255, 255, 0.1);
+$colorslider-vertical-border-color-hover: rgba(255, 255, 255, 0.1);
+$colorslider-vertical-border-color-down: rgba(255, 255, 255, 0.1);
+$colorslider-vertical-border-color-key-focus: rgba(255, 255, 255, 0.1);
+
+$colorwheel-border-color: rgba(255, 255, 255, 0.1);
+$colorwheel-border-color-hover: rgba(255, 255, 255, 0.1);
+$colorwheel-border-color-down: rgba(255, 255, 255, 0.1);
+$colorwheel-border-color-key-focus: rgba(255, 255, 255, 0.1);
+
+$miller-column-item-background-color-selected: rgba(55, 142, 240, 0.1);
+$miller-column-item-background-color-selected-hover: rgba(55, 142, 240, 0.2);
+
+$tabs-compact-selection-indicator-color: $global-color-blue-500;
+$tabs-compact-vertical-rule-color: $global-color-gray-200;
+$tabs-compact-vertical-emphasized-selection-indicator-color: $global-color-blue-500;
+$tabs-compact-vertical-emphasized-rule-color: $global-color-gray-200;
+$tabs-emphasized-selection-indicator-color: $global-color-blue-500;
+$tabs-quiet-compact-emphasized-selection-indicator-color: $global-color-blue-500;
+$tabs-quiet-compact-vertical-emphasized-selection-indicator-color: $global-color-blue-500;
+$tabs-quiet-emphasized-selection-indicator-color: $global-color-blue-500;
+$tabs-quiet-vertical-emphasized-selection-indicator-color: $global-color-blue-500;
+
+$tray-background-color: $global-color-gray-100;
+
+$well-background-color: rgba(227, 227, 227, 0.02);
+$well-border-color: rgba(255, 255, 255, 0.05);

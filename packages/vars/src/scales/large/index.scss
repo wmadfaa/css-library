@@ -1,0 +1,7 @@
+@use './vars' as scale;
+
+.large-scale {
+  @each $var, $value in module-variables("scale") {
+    --#{$var}: #{$value};
+  }
+}

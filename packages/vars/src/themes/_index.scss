@@ -1,0 +1,12 @@
+@use 'sass:meta';
+@use 'sass:map';
+
+@use './light/vars' as theme;
+
+@function variable($name) {
+  $vars: meta.module-variables("theme");
+  @if (map.has-key($vars, $name)) {
+    @return var(--#{$name}, #{map.get($vars, $name)});
+  }
+  @error "the variable #{$name} is not exists in the them variables!";
+}

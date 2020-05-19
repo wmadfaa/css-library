@@ -1,11 +1,14 @@
+const path = require("path");
 const { watch, series } = require("gulp");
 const { buildStyles, cleanDist, paths } = require("@css-library/scripts");
 
-exports.buildStyles = buildStyles;
+const _buildStyles = buildStyles([`!${path.resolve(paths.CWD, "./src/globals/**")}`]);
 
-exports.build = series(cleanDist, buildStyles);
+exports.buildStyles = _buildStyles;
+
+exports.build = series(cleanDist, _buildStyles);
 
 exports.watch = function (cb) {
-  watch(paths.STYLES_INPUT_PATH, buildStyles);
+  watch(paths.STYLES_INPUT_PATH, _buildStyles);
   cb();
 };

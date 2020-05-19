@@ -12,7 +12,12 @@
           "use",
           "forward",
           "include",
-          "mixin"
+          "mixin",
+          "each",
+          "function",
+          "return",
+          "if",
+          "error"
         ]
       }
     ],

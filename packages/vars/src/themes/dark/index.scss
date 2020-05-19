@@ -1,0 +1,7 @@
+@use './vars' as theme;
+
+.dark-theme {
+  @each $var, $value in module-variables("theme") {
+    --#{$var}: #{$value};
+  }
+}

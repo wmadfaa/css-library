@@ -1,0 +1,12 @@
+@use 'sass:meta';
+@use 'sass:map';
+
+@use './medium/vars' as scale;
+
+@function variable($name) {
+  $vars: meta.module-variables("scale");
+  @if (map.has-key($vars, $name)) {
+    @return var(--#{$name}, #{map.get($vars, $name)});
+  }
+  @error "the variable #{$name} is not exists in the scale variables!";
+}

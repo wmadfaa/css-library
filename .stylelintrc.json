@@ -17,6 +17,7 @@
           "function",
           "return",
           "if",
+          "else",
           "error"
         ]
       }

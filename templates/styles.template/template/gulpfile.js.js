@@ -4,12 +4,12 @@ const { buildStyles, cleanDist, paths } = require("@css-library/scripts");
 
 const _buildStyles = buildStyles([]);
 
-exports.buildStyles = buildStyles;
+exports.buildStyles = _buildStyles;
 
-exports.build = series(cleanDist, buildStyles);
+exports.build = series(cleanDist, _buildStyles);
 
 exports.watch = function (cb) {
-  watch(paths.STYLES_INPUT_PATH, buildStyles);
+  watch(paths.STYLES_INPUT_PATH, _buildStyles);
   cb();
 };`;
 };

@@ -15,9 +15,10 @@ sass.compiler = require("sass");
 
 module.exports = function (exclude_paths = []) {
   return function compileStyles(cb) {
+    console.log(paths.ROOT_NODE_MODULES);
     src([paths.STYLES_INPUT_PATH, ...paths.STYLES_EXCLUDE_PATHS, ...exclude_paths])
       .pipe(sourcemaps.init())
-      .pipe(sass({ fiber }).on("error", sass.logError))
+      .pipe(sass({ fiber, includePaths: [paths.ROOT_NODE_MODULES, "node_modules"] }).on("error", sass.logError))
       .pipe(sourcemaps.write())
       .pipe(postcss([autoprefixer()]))
       .pipe(

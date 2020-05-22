@@ -1,0 +1,22 @@
+@use '@css-library/vars/src/themes' as theme;
+@use '@css-library/vars/src/scales' as scale;
+
+$accordion-border-color: theme.variable("global-color-gray-300");
+$accordion-icon-color: theme.variable("global-color-gray-600");
+$accordion-text-color: theme.variable("global-color-gray-700");
+$accordion-icon-color-hover: theme.variable("global-color-gray-800");
+$accordion-text-color-hover: theme.variable("global-color-gray-900");
+$accordion-background-color-hover: theme.variable("global-color-gray-200");
+$accordion-icon-color-down: theme.variable("global-color-gray-800");
+$accordion-text-color-down: theme.variable("global-color-gray-900");
+$accordion-icon-color-key-focus: theme.variable("global-color-gray-800");
+$accordion-text-color-key-focus: theme.variable("global-color-gray-900");
+$accordion-icon-color-disabled: theme.variable("global-color-gray-400");
+$accordion-text-color-disabled: theme.variable("global-color-gray-500");
+$accordion-item-padding-x: scale.variable("global-dimension-size-225");
+$accordion-icon-gap: scale.variable("global-dimension-size-100");
+$accordion-icon-width: scale.variable("global-dimension-size-75");
+$accordion-icon-height: scale.variable("global-dimension-size-125");
+$accordion-item-title-text-size: scale.variable("global-dimension-font-size-50");
+$accordion-item-content-padding: scale.variable("global-dimension-size-200");
+$accordion-item-title-padding-y: scale.variable("global-dimension-size-150");

@@ -1,0 +1,16 @@
+@use 'sass:meta';
+@use 'sass:map';
+
+@use './vars.global.scss' as global;
+@use './vars.static.scss' as static;
+
+@function variable($name) {
+  $global-vars: meta.module-variables("global");
+  $static-vars: meta.module-variables("static");
+  @if (map.has-key($global-vars, $name)) {
+    @return var(--#{$name}, #{map.get($global-vars, $name)});
+  } @else if(map.has-key($static-vars, $name)) {
+    @return map.get($static-vars, $name);
+  }
+  @error "the variable #{$name} is not exists in the accordion variables!";
+}

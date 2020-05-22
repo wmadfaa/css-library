@@ -1,0 +1,15 @@
+@use '@css-library/vars/src/globals' as globalVariables;
+
+$accordion-item-title-tracking: globalVariables.$global-font-letter-spacing-medium;
+$accordion-item-border-size: globalVariables.$alias-border-size-thin;
+$accordion-item-border-left-size-key-focus: globalVariables.$alias-border-size-thick;
+$accordion-border-left-color-key-focus: globalVariables.$alias-border-color-focus;
+$accordion-item-border-left-color-key-focus: globalVariables.$alias-border-color-focus;
+$accordion-item-height: 40px;
+$accordion-item-padding: 16px;
+$accordion-icon-width: 6px;
+$accordion-item-border-size-key-focus: 2px;
+$accordion-icon-spacing: 16px;
+$accordion-item-line-height: 1.3;
+$accordion-item-height-actual: $accordion-item-height - $accordion-item-border-size;
+$accordion-item-title-tracking-actual: $accordion-item-title-tracking/ 100;

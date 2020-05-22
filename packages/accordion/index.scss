@@ -1,0 +1,131 @@
+@use '@css-library/vars/src/globals' as global;
+@use './src/vars/vars.global' as accordionVariables;
+@use './src/vars' as *;
+
+:root {
+  @each $var, $value in module-variables("accordionVariables") {
+    --#{$var}: #{$value};
+  }
+}
+
+.spectrum-Accordion {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spectrum-Accordion-itemIndicator {
+  display: block;
+
+  position: absolute;
+  inset-inline-start: variable("accordion-icon-spacing");
+  inset-block-start: calc(#{variable("accordion-item-height-actual")} / 2 - #{variable("accordion-icon-height")} / 2);
+
+  transition: transform ease global.$global-animation-duration-100;
+
+  transform: logical rotate(0deg);
+}
+
+.spectrum-Accordion-item {
+  z-index: inherit;
+  position: relative;
+
+  display: list-item;
+  margin: 0;
+
+  border-block-end: variable("accordion-item-border-size") solid transparent;
+
+  &:first-of-type {
+    border-block-start: variable("accordion-item-border-size") solid transparent;
+  }
+}
+
+.spectrum-Accordion-itemHeading {
+  margin: 0;
+}
+
+.spectrum-Accordion-itemHeader {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+  /* left padding takes into account the icon's size as well as the focus state's left border */
+  padding-block: variable("accordion-item-title-padding-y");
+  padding-inline: calc(calc(#{variable("accordion-item-padding")} * 2) + 2px) #{variable("accordion-item-padding")};
+  margin: 0;
+
+  min-block-size: variable("accordion-item-height-actual");
+
+  font-size: variable("accordion-item-title-text-size");
+  line-height: variable("accordion-item-line-height");
+  text-transform: uppercase;
+  letter-spacing: variable("accordion-item-title-tracking-actual");
+
+  text-overflow: ellipsis;
+  cursor: pointer;
+  font-weight: 500;
+
+  /* reset styling if button element is used */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: inherit;
+  border: 0;
+  font-family: inherit;
+  text-align: start;
+  inline-size: 100%;
+
+  &:focus {
+    outline: none;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      inset-inline-start: 0;
+      inset-block-start: calc(-1 * #{variable("accordion-item-border-size")});
+      inset-block-end: calc(-1 * #{variable("accordion-item-border-size")});
+
+      inline-size: variable("accordion-item-border-size-key-focus");
+    }
+  }
+}
+
+.spectrum-Accordion-itemContent {
+  padding-block: 0 variable("accordion-item-content-padding");
+  padding-inline: variable("accordion-item-content-padding") variable("accordion-item-content-padding");
+  display: none;
+}
+
+.spectrum-Accordion-item {
+  &.is-open {
+    > .spectrum-Accordion-itemHeading {
+      > .spectrum-Accordion-itemIndicator {
+        transform: logical rotate(90deg);
+      }
+    }
+
+    > .spectrum-Accordion-itemIndicator {
+      transform: logical rotate(90deg);
+    }
+
+    > .spectrum-Accordion-itemHeader::after {
+      /* No bottom border when open, so be less tall */
+      block-size: variable("accordion-item-height-actual");
+    }
+
+    > .spectrum-Accordion-itemContent {
+      display: block;
+    }
+  }
+
+  &.is-disabled {
+    .spectrum-Accordion-itemHeader {
+      cursor: default;
+    }
+  }
+}

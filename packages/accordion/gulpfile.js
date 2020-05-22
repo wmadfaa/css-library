@@ -1,7 +1,8 @@
+const path = require("path");
 const { watch, series } = require("gulp");
 const { buildStyles, cleanDist, paths } = require("@css-library/scripts");
 
-const _buildStyles = buildStyles([]);
+const _buildStyles = buildStyles([`!${path.resolve(__dirname, "./src/vars/*")}`]);
 
 exports.buildStyles = _buildStyles;
 

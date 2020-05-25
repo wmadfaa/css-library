@@ -8,44 +8,31 @@
   }
 }
 
-.spectrum-Accordion {
+.accordion {
   display: block;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.spectrum-Accordion-itemIndicator {
+.accordion-itemIndicator {
   display: block;
 
   position: absolute;
   inset-inline-start: variable("accordion-icon-spacing");
   inset-block-start: calc(#{variable("accordion-item-height-actual")} / 2 - #{variable("accordion-icon-height")} / 2);
-
   transition: transform ease global.$global-animation-duration-100;
 
   transform: logical rotate(0deg);
+
+  color: variable("accordion-icon-color");
 }
 
-.spectrum-Accordion-item {
-  z-index: inherit;
-  position: relative;
-
-  display: list-item;
-  margin: 0;
-
-  border-block-end: variable("accordion-item-border-size") solid transparent;
-
-  &:first-of-type {
-    border-block-start: variable("accordion-item-border-size") solid transparent;
-  }
-}
-
-.spectrum-Accordion-itemHeading {
+.accordion-itemHeading {
   margin: 0;
 }
 
-.spectrum-Accordion-itemHeader {
+.accordion-itemHeader {
   position: relative;
 
   display: flex;
@@ -53,7 +40,6 @@
   justify-content: flex-start;
 
   box-sizing: border-box;
-  /* left padding takes into account the icon's size as well as the focus state's left border */
   padding-block: variable("accordion-item-title-padding-y");
   padding-inline: calc(calc(#{variable("accordion-item-padding")} * 2) + 2px) #{variable("accordion-item-padding")};
   margin: 0;
@@ -69,15 +55,30 @@
   cursor: pointer;
   font-weight: 500;
 
-  /* reset styling if button element is used */
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background-color: inherit;
   border: 0;
   font-family: inherit;
   text-align: start;
   inline-size: 100%;
+
+  color: variable("accordion-text-color");
+
+  &:hover {
+    color: variable("accordion-text-color-hover");
+
+    background-color: variable("accordion-background-color-hover");
+
+    + .accordion-itemIndicator {
+      color: variable("accordion-icon-color-hover");
+    }
+  }
+
+  &:focus-ring {
+    &:after {
+      background-color: variable("accordion-border-left-color-key-focus");
+    }
+  }
 
   &:focus {
     outline: none;
@@ -95,37 +96,70 @@
   }
 }
 
-.spectrum-Accordion-itemContent {
+.accordion-itemContent {
   padding-block: 0 variable("accordion-item-content-padding");
   padding-inline: variable("accordion-item-content-padding") variable("accordion-item-content-padding");
   display: none;
 }
 
-.spectrum-Accordion-item {
+.accordion-item {
+  z-index: inherit;
+  position: relative;
+
+  display: list-item;
+  margin: 0;
+
+  border-block-end: variable("accordion-item-border-size") solid transparent;
+  border-bottom: variable("accordion-item-border-size") solid transparent;
+  &:first-of-type {
+    border-block-start: variable("accordion-item-border-size") solid transparent;
+  }
+
+  border-color: variable("accordion-border-color");
+
   &.is-open {
-    > .spectrum-Accordion-itemHeading {
-      > .spectrum-Accordion-itemIndicator {
+    > .accordion-itemIndicator {
+      transform: logical rotate(90deg);
+    }
+
+    > .accordion-itemHeading {
+      > .accordion-itemIndicator {
         transform: logical rotate(90deg);
       }
     }
 
-    > .spectrum-Accordion-itemIndicator {
-      transform: logical rotate(90deg);
+    > .accordion-itemHeader {
+      &:hover {
+        background-color: transparent;
+      }
     }
 
-    > .spectrum-Accordion-itemHeader::after {
+    > .accordion-itemHeader::after {
       /* No bottom border when open, so be less tall */
       block-size: variable("accordion-item-height-actual");
     }
 
-    > .spectrum-Accordion-itemContent {
+    > .accordion-itemContent {
       display: block;
     }
   }
 
   &.is-disabled {
-    .spectrum-Accordion-itemHeader {
+    /* stylelint-disable-next-line no-descending-specificity */
+    .accordion-itemHeader {
       cursor: default;
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      &,
+      &:hover,
+      &:focus-ring {
+        color: variable("accordion-text-color-disabled");
+        background-color: transparent;
+      }
+
+      + .accordion-itemIndicator {
+        color: variable("accordion-icon-color-disabled");
+      }
     }
   }
 }

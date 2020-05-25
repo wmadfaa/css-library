@@ -35,5 +35,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@css-library/accordion": "1.0.0"
   }
 }
